@@ -39,16 +39,16 @@ static void stop_drawing_early_suspend(struct early_suspend *h)
 	int ret;
 	unsigned long irq_flags;
 
-<<<<<<< HEAD
+
 #ifdef CONFIG_EARLY_SUSPEND_DELAY
 	if (early_suspend_delay != EARLY_SUSPEND_DISABLED)
 		msleep(early_suspend_delay); /* Allow for a little pause so CRT-off animation can be played (initial idea credits to codeworkx) */
 #endif
-=======
+
     /* FIXME: earlysuspend breaks androids CRT-off animation
      * Sleep a little bit to get it played properly */
     msleep(fbearlysuspend_delay);
->>>>>>> 4f99df8... implemented compatibility for CRT ON/OFF efect
+
 
 	spin_lock_irqsave(&fb_state_lock, irq_flags);
 	fb_state = FB_STATE_REQUEST_STOP_DRAWING;
