@@ -5,7 +5,7 @@ ARCH=$2
 SMP=$3
 PREEMPT=$4
 CC=$5
-hbover=$(cat /home/pst-kubuntu/Pulpit/android/kernel/sammy43/version)
+hbover=$(cat /home/pst/Desktop/android/kernel/sammy43/version)
 hbodata=$(date '+%Y%m%d')
 
 vecho() { [ "${quiet}" = "silent_" ] || echo "$@" ; }
